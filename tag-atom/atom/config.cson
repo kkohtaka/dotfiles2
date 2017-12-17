@@ -1,0 +1,17 @@
+"*":
+  core:
+    disabledPackages: [
+      "linter-jscs"
+      "linter-jshint"
+    ]
+    followSymlinks: false
+  editor:
+    fontFamily: "Noto Sans CJK JP"
+    fontSize: 13
+    showInvisibles: true
+  "exception-reporting":
+    userId: "ed94c887-555e-998f-2cee-8c833ea675fc"
+  "go-config":
+    gopath: "$HOME/go"
+  welcome:
+    showOnStartup: false

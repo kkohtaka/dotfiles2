@@ -1,0 +1,5 @@
+'deb[arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
+ppa:martin-frost/thoughtbot-rcm
+ppa:webupd8team/atom
+ppa:gophers/archive
+ppa:flexiondotorg/albert

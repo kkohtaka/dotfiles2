@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+pushd ${DOTFILES_DIRS}
+
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install --yes ansible
+ansible-playbook \
+  --inventory ansible/inventory.ini \
+  ansible/playbook.yml \
+  --ask-become-pass
+
+popd

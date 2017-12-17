@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE syp"
+EXCLUDES="README.md LICENSE install.sh syp"
 DOTFILES_DIRS=$HOME/dotfiles

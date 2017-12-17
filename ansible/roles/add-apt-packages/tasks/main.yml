@@ -1,0 +1,8 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+- name: Add APT packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ apt_packages }}"

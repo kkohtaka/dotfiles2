@@ -1,0 +1,16 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+apt_packages:
+- google-chrome-stable
+- gnome-tweak-tool
+- ibus-mozc
+- rcm
+- git
+- python-pip
+- xsel
+- fonts-noto-cjk
+- compizconfig-settings-manager
+- atom
+- golang-1.9-go
+- albert

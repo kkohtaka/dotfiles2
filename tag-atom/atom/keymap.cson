@@ -2,6 +2,16 @@
   'ctrl-0': 'tree-view:toggle-focus'
 'atom-text-editor':
   'ctrl-h': 'core:backspace'
+  'ctrl-p': 'core:move-up'
+  'ctrl-n': 'core:move-down'
+  'ctrl-f': 'core:move-right'
+  'ctrl-b': 'core:move-left'
+  'ctrl-d': 'core:delete'
+  'ctrl-y': 'core:paste'
+
   'ctrl-i': 'editor:indent'
   'ctrl-j': 'editor:newline'
-  'ctrl-y': 'core:paste'
+  'ctrl-a': 'editor:move-to-first-character-of-line'
+  'ctrl-e': 'editor:move-to-end-of-line'
+
+  'alt-d': 'find-and-replace:select-next'

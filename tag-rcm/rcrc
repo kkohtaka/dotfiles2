@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE install.sh syp"
+EXCLUDES="README.md LICENSE install.sh ansible syp"
 DOTFILES_DIRS=$HOME/dotfiles

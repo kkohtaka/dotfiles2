@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-pushd ${DOTFILES_DIRS}
+export DOTFILES_DIRS=$HOME/dotfiles
+
+cd ${DOTFILES_DIRS}
 
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
@@ -9,5 +11,3 @@ ansible-playbook \
   --inventory ansible/inventory.ini \
   ansible/playbook.yml \
   --ask-become-pass
-
-popd

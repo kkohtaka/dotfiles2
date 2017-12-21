@@ -14,3 +14,4 @@ apt_packages:
 - atom
 - golang-1.9-go
 - albert
+- httpie

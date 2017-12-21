@@ -2,7 +2,7 @@
 # This file is available under the MIT license.
 
 apt_repositories:
-- deb http://dl.google.com/linux/chrome/deb/ stable main
+- deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 - ppa:martin-frost/thoughtbot-rcm
 - ppa:webupd8team/atom
 - ppa:gophers/archive

@@ -8,3 +8,4 @@
   - add-apt-repositories
   - add-apt-packages
   - add-pip-packages
+  - add-docker-ce

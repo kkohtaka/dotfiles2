@@ -1,0 +1,13 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+- name: Download and unarchive the TensorFlow C Library
+  unarchive:
+    src: https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-{{ tf_type }}-linux-x86_64-{{ version }}.tar.gz
+    dest: /usr/local
+    remote_src: yes
+    creates: /usr/local/lib/libtensorflow.so
+
+- name: Run ldconfig
+  command: /sbin/ldconfig
+  changed_when: false

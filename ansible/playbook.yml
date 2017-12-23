@@ -9,3 +9,4 @@
   - add-apt-packages
   - add-pip-packages
   - add-docker-ce
+  - add-tensorflow-c-library

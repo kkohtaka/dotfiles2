@@ -13,6 +13,7 @@
   'ctrl-j': 'editor:newline'
   'ctrl-a': 'editor:move-to-first-character-of-line'
   'ctrl-e': 'editor:move-to-end-of-line'
+  'ctrl-k ctrl-k': 'editor:cut-to-end-of-line'
 
   'alt-f': 'find-and-replace:show'
   'alt-d': 'find-and-replace:select-next'

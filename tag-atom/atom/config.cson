@@ -5,6 +5,7 @@
       "linter-jshint"
     ]
     followSymlinks: false
+    telemetryConsent: "limited"
   editor:
     fontFamily: "Noto Sans Mono CJK JP"
     fontSize: 14

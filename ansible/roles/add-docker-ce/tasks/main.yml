@@ -19,6 +19,7 @@
 - name: Add APT repository
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    filename: docker
     state: present
 
 - name: Add APT packages

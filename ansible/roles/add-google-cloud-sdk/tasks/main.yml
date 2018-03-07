@@ -1,0 +1,28 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+- name: Add basic APT packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - apt-transport-https
+  - lsb-core
+
+- name: Add APT key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add APT repository
+  apt_repository:
+    repo: deb https://packages.cloud.google.com/apt cloud-sdk-{{ lookup('pipe', 'lsb_release -c -s') }} main
+    filename: gcp
+    state: present
+
+- name: Add APT packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - google-cloud-sdk

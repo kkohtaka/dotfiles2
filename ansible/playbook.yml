@@ -10,3 +10,4 @@
   - add-pip-packages
   - add-docker-ce
   - add-tensorflow-c-library
+  - add-google-cloud-sdk

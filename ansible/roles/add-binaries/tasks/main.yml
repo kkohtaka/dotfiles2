@@ -1,0 +1,58 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+- file:
+    path: ~/{{ item }}
+    state: directory
+  with_items:
+  - "{{ bin_dir }}"
+  - "{{ archive_dir }}"
+  - "{{ archive_dir }}/{{ helm_archive_dir }}"
+
+- name: unarchive Kubernetes Helm
+  unarchive:
+    remote_src: yes
+    src: "{{ helm_url }}"
+    dest: ~/{{ archive_dir }}/{{ helm_archive_dir }}
+
+- name: install Kubernetes Helm
+  copy:
+    remote_src: yes
+    src: ~/{{ archive_dir }}/{{ helm_archive_dir }}/linux-amd64/helm
+    dest: ~/{{ bin_dir }}
+    mode: 0755
+
+- name: unarchive GitHub CLI
+  unarchive:
+    remote_src: yes
+    src: "{{ hub_url }}"
+    dest: ~/{{ archive_dir }}
+
+- name: install GitHub CLI
+  copy:
+    remote_src: yes
+    src: ~/{{ archive_dir }}/hub-linux-amd64-{{ hub_version }}/bin/hub
+    dest: ~/{{ bin_dir }}
+    mode: 0755
+
+- name: install Docker Compose
+  get_url:
+    url: "{{ docker_compose_url }}"
+    dest: ~/{{ bin_dir }}/docker-compose
+    mode: 0755
+
+- name: unarchive Git LFS
+  unarchive:
+    remote_src: yes
+    src: "{{ git_lfs_url }}"
+    dest: ~/{{ archive_dir }}
+
+- name: install Git LFS
+  copy:
+    remote_src: yes
+    src: ~/{{ archive_dir }}/git-lfs-{{ git_lfs_version }}/git-lfs
+    dest: ~/{{ bin_dir }}
+    mode: 0755
+
+- name: enable Git LFS
+  shell: git lfs install

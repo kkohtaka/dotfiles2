@@ -1,0 +1,15 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+helm_version: v2.8.1
+helm_url: https://storage.googleapis.com/kubernetes-helm/helm-{{ helm_version }}-linux-amd64.tar.gz
+helm_archive_dir: helm-{{ helm_version }}
+
+hub_version: 2.2.9
+hub_url: https://github.com/github/hub/releases/download/v{{ hub_version }}/hub-linux-amd64-{{ hub_version }}.tgz
+
+docker_compose_version: 1.19.0
+docker_compose_url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64
+
+git_lfs_version: 2.3.4
+git_lfs_url: https://github.com/git-lfs/git-lfs/releases/download/v{{ git_lfs_version }}/git-lfs-linux-amd64-{{ git_lfs_version }}.tar.gz

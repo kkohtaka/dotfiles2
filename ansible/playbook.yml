@@ -11,3 +11,4 @@
   - add-docker-ce
   - add-tensorflow-c-library
   - add-google-cloud-sdk
+  - add-kubernetes
